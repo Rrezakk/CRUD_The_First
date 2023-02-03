@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationContext>(options=> options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")),ServiceLifetime.Singleton);
-
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
