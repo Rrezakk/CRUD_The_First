@@ -1,14 +1,22 @@
-﻿namespace CRUD_The_First.Services;
+﻿using CRUD_The_First.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
+
+namespace CRUD_The_First.Services;
 public class BufferedFileUploadLocalService:IBufferedFileUploadService
 {
-    private IWebHostEnvironment _environment;
-    public BufferedFileUploadLocalService(IWebHostEnvironment environment)
+    private readonly IWebHostEnvironment _environment;
+    private readonly ApplicationContext _context;
+    public BufferedFileUploadLocalService(IWebHostEnvironment environment, ApplicationContext context)
     {
         _environment = environment;
+        _context = context;
 
     }
     public async Task<(bool,string)> UploadFile(IFormFile file)
     {
+        var lastId = _context.Files.OrderByDescending(x=>x.Id).FirstOrDefaultAsync().Id;
+        var idString = $"{lastId}".PadLeft(8, '0') ;
         string path = "";
         try
         {
@@ -19,7 +27,14 @@ public class BufferedFileUploadLocalService:IBufferedFileUploadService
                 {
                     Directory.CreateDirectory(path);
                 }
-                var destFilePath = Path.Combine(path, file.FileName);
+                
+                var fileNameWithoutExt = Path.GetFileNameWithoutExtension(file.FileName);
+                var fileExt = Path.GetExtension(file.FileName);
+                var fileNameWithId = fileNameWithoutExt +"_"+ idString + fileExt;
+                var destFilePath = Path.Combine(path, fileNameWithId);
+
+                Debug.WriteLine($"Dest file: {destFilePath}");
+                
                 using (var fileStream = new FileStream(destFilePath, FileMode.Create))
                 {
                     await file.CopyToAsync(fileStream);
@@ -33,6 +48,7 @@ public class BufferedFileUploadLocalService:IBufferedFileUploadService
         }
         catch (Exception ex)
         {
+            Debug.WriteLine($"Exception: {ex}");
             throw new Exception("File Copy Failed", ex);
         }
     }
