@@ -1,0 +1,39 @@
+@model IEnumerable<FileModel>
+@{
+    ViewData["Title"] = "Files";
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Files List</h2>
+        </div>
+        <div class="col-6 text-end">
+            
+            <a asp-controller="File" asp-action="Create" class="btn btn-primary">
+               <i class="bi bi-plus-square"></i> &nbsp; Create New File
+            </a>
+        </div>
+    </div>
+<br/><br/>
+<table class="table table-bordered table-striped" style="width: 100%">
+    <thead>
+    <tr>
+        <th>FileName</th>
+        <th>Url</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td width="50%">
+                @obj.FileName
+            </td>
+            <td width="30%">
+                @obj.StaticUrl
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>
