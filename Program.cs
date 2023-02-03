@@ -1,4 +1,5 @@
 using CRUD_The_First.Data;
+using CRUD_The_First.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationContext>(options=> options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")),ServiceLifetime.Singleton);
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.AddTransient<IBufferedFileUploadService, BufferedFileUploadLocalService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
