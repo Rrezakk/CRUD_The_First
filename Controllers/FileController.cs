@@ -14,7 +14,12 @@ public class FileController : Controller
     // GET
     public IActionResult Index()
     {
-        IEnumerable<FIleModel> objFileList = _context.Files;
+        IEnumerable<FileModel> objFileList = _context.Files;
         return View(objFileList);
+    }
+    //GET
+    public IActionResult Create()
+    {
+        return View();
     }
 }

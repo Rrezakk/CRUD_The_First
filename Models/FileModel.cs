@@ -2,7 +2,7 @@
 
 namespace CRUD_The_First.Models;
 
-public class FIleModel
+public class FileModel
 {
     [Key]
     public int Id { get; set; }
