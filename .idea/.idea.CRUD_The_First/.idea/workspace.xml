@@ -5,9 +5,15 @@
     <projectFile profileName="IIS Express">CRUD_The_First.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e87a27b-90a7-4b88-bf2c-821d7c186b11" name="Changes" comment="Creating files">
+    <list default="true" id="2e87a27b-90a7-4b88-bf2c-821d7c186b11" name="Changes" comment="Right way uploading">
+      <change afterPath="$PROJECT_DIR$/DTOs/CreationFileModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DTOs/FIleEditingModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CRUD_The_First/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CRUD_The_First/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/FileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/BufferedFileUploadLocalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BufferedFileUploadLocalService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/File/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/File/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/File/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/File/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e3bc3f84cc248cc742fc1c5f56a7727d2febed13ab281104470f728796baac5/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Admin/RiderProjects/CRUD_The_First/Data/ApplicationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Admin/RiderProjects/CRUD_The_First/Services/BufferedFileUploadLocalService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675431356581</updated>
-      <workItem from="1675431360949" duration="10954000" />
+      <workItem from="1675431360949" duration="20900000" />
     </task>
     <task id="LOCAL-00001" summary="Basics - libs + model + arch">
       <created>1675433741133</created>
@@ -126,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675441485775</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Right way uploading">
+      <created>1675442619283</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675442619283</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,25 +165,7 @@
     <MESSAGE value="Bootstrap and index" />
     <MESSAGE value="FileModel name fix and creation page" />
     <MESSAGE value="Creating files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating files" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/FileController.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\Admin\RiderProjects\CRUD_The_First\Controllers\FileController.cs" initialLine="39" containingFunctionPresentation="method 'Create'">
-            <startOffsets>
-              <option value="1147" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1209" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Right way uploading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Right way uploading" />
   </component>
 </project>

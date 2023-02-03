@@ -15,7 +15,7 @@ public class BufferedFileUploadLocalService:IBufferedFileUploadService
     }
     public async Task<(bool,string)> UploadFile(IFormFile file)
     {
-        var lastId = _context.Files.OrderByDescending(x=>x.Id).FirstOrDefaultAsync().Id;
+        var lastId = _context.Files.Max(x=>x.Id);
         var idString = $"{lastId}".PadLeft(8, '0') ;
         string path = "";
         try
@@ -39,7 +39,8 @@ public class BufferedFileUploadLocalService:IBufferedFileUploadService
                 {
                     await file.CopyToAsync(fileStream);
                 }
-                return (true,destFilePath);
+                var url = destFilePath.Replace(Environment.CurrentDirectory, "").Replace(@"\wwwroot","");
+                return (true,url);
             }
             else
             {

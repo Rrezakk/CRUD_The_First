@@ -1,9 +1,9 @@
-@model CreationFileModel
+@model FileModel
 
-<form method="post" enctype="multipart/form-data" asp-controller="File" asp-action="Create">
+<form method="post" asp-controller="File" asp-action="Edit">
     <div class="border p-3 mt-4 bg-body">
         <div class=" row pb-2">
-            <h2 class="text-primary">Create File</h2>
+            <h2 class="text-primary">Edit file</h2>
             <hr />
         </div>
         <div asp-validation-summary="All"></div>
@@ -13,12 +13,11 @@
             <span asp-validation-for="FileName" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label>Choose a file</label>
-            <input type="file" asp-for="File" class="form-control"/>
-            <span asp-validation-for="File" class="text-danger"></span>
+            <label >Url</label>
+            <input asp-for="StaticUrl" class="form-control" disabled />@*"*@
         </div>
-        <input asp-for="StaticUrl" type="hidden" value="none"></input>
-        <button type="submit" class="btn btn-primary " style="width:150px">Create</button>
+        <input asp-for="Id" hidden/>
+        <button type="submit" class="btn btn-primary " style="width:150px">Update</button>
         <a asp-controller="File" asp-action="Index" class="btn btn-secondary" style="width:150px">Back</a>
     </div>
 </form>
@@ -28,4 +27,3 @@
         <partial name="_ValidationScriptsPartial"/>
     }
 }
-
