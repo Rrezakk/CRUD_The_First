@@ -5,16 +5,7 @@
     <projectFile profileName="IIS Express">CRUD_The_First.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e87a27b-90a7-4b88-bf2c-821d7c186b11" name="Changes" comment="Right way uploading">
-      <change afterPath="$PROJECT_DIR$/DTOs/CreationFileModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DTOs/FIleEditingModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CRUD_The_First/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CRUD_The_First/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/FileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/BufferedFileUploadLocalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BufferedFileUploadLocalService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/File/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/File/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/File/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/File/Index.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="2e87a27b-90a7-4b88-bf2c-821d7c186b11" name="Changes" comment="Editing files + Deleting + Downloading" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +19,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/43707d94720c2aa35cbbec458202bcd773268859a65a0bf53bc4af9c4f13/FileSystem.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e3bc3f84cc248cc742fc1c5f56a7727d2febed13ab281104470f728796baac5/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Admin/RiderProjects/CRUD_The_First/Data/ApplicationContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675431356581</updated>
-      <workItem from="1675431360949" duration="20900000" />
+      <workItem from="1675431360949" duration="21319000" />
     </task>
     <task id="LOCAL-00001" summary="Basics - libs + model + arch">
       <created>1675433741133</created>
@@ -140,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675442619283</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Editing files + Deleting + Downloading">
+      <created>1675454561845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675454561845</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +165,26 @@
     <MESSAGE value="FileModel name fix and creation page" />
     <MESSAGE value="Creating files" />
     <MESSAGE value="Right way uploading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Right way uploading" />
+    <MESSAGE value="Editing files + Deleting + Downloading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Editing files + Deleting + Downloading" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/FileController.cs</url>
+          <line>160</line>
+          <properties documentPath="C:\Users\Admin\RiderProjects\CRUD_The_First\Controllers\FileController.cs" initialLine="148" containingFunctionPresentation="method 'Download'">
+            <startOffsets>
+              <option value="4965" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4993" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
